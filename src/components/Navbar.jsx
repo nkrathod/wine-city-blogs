@@ -24,10 +24,10 @@ function NavbarComponent() {
       </h1>
       <ul id="sidemenu">
         <li>
-          <a href="#">Home</a>
+          <a onClick={() => (window.location = "/")}>Home</a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a onClick={() => (window.location = "/about")} href="#about">About</a>
         </li>
         <li>
           <a href="/blogs">Blogs</a>

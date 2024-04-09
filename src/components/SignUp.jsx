@@ -55,9 +55,9 @@ export default function SignUp() {
     }
   };
 
-  if (authenticated) {
-    window.location = "/dashboard";
-  }
+  // if (authenticated) {
+  //   window.location = "/dashboard";
+  // }
 
   return (
     <ThemeProvider theme={defaultTheme}>
