@@ -1,0 +1,50 @@
+{
+    "users": [
+        {
+          "id": 1,
+          "name": "Administrator",
+          "firstName": "Admin",
+          "lastName": "User",
+          "username": "admin",
+          "password": "admin@123",
+          "usertype": "admin",
+          "email": "admin@gmail.com"
+        },
+        {
+          "id": 2,
+          "name": "Rutuja Lambe",
+          "firstName": "Rutuja",
+          "lastName": "Lambe",
+          "username": "rutulambe",
+          "password": "rutu@123",
+          "usertype": "user",
+          "email": "rutulambe@gmail.com"
+        },
+        {
+          "firstName": "Nitesh",
+          "lastName": "Rathod",
+          "username": "niteshrathod15205@gmail.com",
+          "name": "Nitesh Rathod",
+          "email": "niteshrathod15205@gmail.com",
+          "password": "test123",
+          "usertype": "user",
+          "id": 3
+        }
+      ],
+      "blogs": [{
+        "id": "123",
+        "title": "New Blog",
+        "description": "blogs descriptions",
+        "imgUrl": "https://withhusbandintow.com/wp-content/uploads/2019/05/Rioja-Travel-Guide-90.jpg",
+        "userid": "123",
+        "timestamp": "",
+        "likesCount": 2,
+        "likedBy": [{"userid": "123", "username": "rutulambe"}],
+        "blogsComments": [{
+          "comment": "test comment",
+          "likesCount": 2,
+          "likedBy": [{"userid": "123", "username": "rutulambe"}],
+          "commentsBy": [{"userid": "123", "username": "rutulambe"}]
+        }]
+      }]
+}
