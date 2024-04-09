@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -8,9 +8,34 @@ import Typography from "@mui/material/Typography";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ModeCommentIcon from "@mui/icons-material/ModeComment";
 import { TextField, Avatar, Box, Grid } from "@mui/material";
+import axios from "axios";
 
 const Blogs = (props) => {
   console.log("props ", props);
+  const [comments, setComments] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3003/blogs/${props.data.id}`)
+      .then((response) => {
+        console.log(
+          props.data.id,
+          " blogsComments => ",
+          response.data.blogsComments
+        );
+        if (
+          response &&
+          response.data &&
+          response.data &&
+          response.data.blogsComments.length > 0
+        ) {
+          setComments(response.data.blogsComments);
+        }
+      })
+      .catch((error) => {
+        console.log("error ==> ", error);
+      });
+  }, [props.data]);
+
   return (
     <div style={{ marginBottom: "50px" }}>
       <Card sx={{ maxWidth: 900 }}>
@@ -36,9 +61,9 @@ const Blogs = (props) => {
           </Button>
         </CardActions>
         <Box className="commentSection">
-          <Grid container spacing={2} style={{ marginBottom: "25px" }}>
+          <Grid container spacing={2}>
             <Grid item xs={1}>
-              <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+              <Avatar alt={props.data.name} src="/static/images/avatar/1.jpg" />
             </Grid>
             <Grid item xs={11}>
               <TextField
@@ -48,20 +73,43 @@ const Blogs = (props) => {
               ></TextField>
             </Grid>
           </Grid>
-          <Grid
-            container
-            spacing={2}
-            style={{ backgroundColor: "#fafcbb", padding: "5px 15px" }}
-          >
-            <Grid item xs={11}>
-              <Typography variant="body2" color="text.secondary">
-                commentSection
-              </Typography>
-            </Grid>
-            <Grid item xs={1}>
-              <Button size="small" startIcon={<ThumbUpIcon />}>
-                {props.data.likesCount}
-              </Button>
+          <Grid container spacing={2}>
+            <Grid
+              item
+              xs={12}
+              style={{
+                marginTop: "30px",
+                backgroundColor: "#fafcbb",
+                padding: "10px 20px",
+              }}
+            >
+              {" "}
+              {comments.length > 0 &&
+                comments.map((data) => (
+                  <Box style={{ padding: "5px" }}>
+                    <Grid container spacing={2}>
+                      <Grid item xs={1}>
+                        <Avatar
+                          alt={data.commentsBy.name}
+                          src="/static/images/avatar/1.jpg"
+                        />
+                      </Grid>
+                      <Grid item xs={10}>
+                        <Typography variant="body2" color="text.secondary">
+                          {data.commentsBy.username}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {data.comment}
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={1}>
+                        <Button size="small" startIcon={<ThumbUpIcon />}>
+                          {data.likesCount}
+                        </Button>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                ))}
             </Grid>
           </Grid>
         </Box>

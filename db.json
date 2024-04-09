@@ -37,32 +37,17 @@
         "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
         "imgUrl": "https://withhusbandintow.com/wp-content/uploads/2019/05/Rioja-Travel-Guide-90.jpg",
         "userid": 2,
+        "username": "rutulambe",
+        "name":"Rutuja Lambe",
         "timestamp": "",
         "likesCount": 2,
         "commentsCount": 2,
-        "likedBy": [{"userid": 2, "username": "rutulambe"}],
+        "likedBy": [{"userid": 2, "username": "rutulambe", "name":"Rutuja Lambe"}],
         "blogsComments": [{
           "comment": "test comment",
-          "likesCount": 2,
-          "likedBy": [{"userid": 2, "username": "rutulambe"}],
-          "commentsBy": [{"userid": 2, "username": "rutulambe"}]
-        }]
-      },
-      {
-        "id": 124,
-        "title": "Test Blog",
-        "description": "blogs descriptions testing",
-        "imgUrl": "https://withhusbandintow.com/wp-content/uploads/2019/05/Rioja-Travel-Guide-90.jpg",
-        "userid": 2,
-        "timestamp": "",
-        "likesCount": 0,
-        "commentsCount": 0,
-        "likedBy": [{"userid": 2, "username": "rutulambe"}],
-        "blogsComments": [{
-          "comment": "test comment",
-          "likesCount": 2,
-          "likedBy": [{"userid": 2, "username": "rutulambe"}],
-          "commentsBy": [{"userid": 2, "username": "rutulambe"}]
+          "likesCount": 1,
+          "likedBy": [{"userid": 2, "username": "rutulambe", "name":"Rutuja Lambe"}],
+          "commentsBy": {"userid": 2, "username": "rutulambe", "name":"Rutuja Lambe"}
         }]
       }]
 }

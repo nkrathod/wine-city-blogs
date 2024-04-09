@@ -30,10 +30,10 @@ function NavbarComponent() {
           <a onClick={() => (window.location = "/about")} href="#about">About</a>
         </li>
         <li>
-          <a href="/blogs">Blogs</a>
+          <a href="/blogs">My Blogs</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact">Logout</a>
         </li>
         <CloseTwoToneIcon className="fa-solid" onClick={() => closemenu()}/>
       </ul>
