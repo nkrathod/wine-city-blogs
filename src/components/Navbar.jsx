@@ -42,9 +42,11 @@ function NavbarComponent() {
             About
           </a>
         </li>
-        <li>
-          <a href="/my-blogs">My Blogs</a>
-        </li>
+        {authenticated && (
+          <li>
+            <a href="/my-blogs">My Blogs</a>
+          </li>
+        )}
         {userDetails && userDetails.firstName && (
           <li>
             <a href="/profile">{userDetails.firstName}</a>

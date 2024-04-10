@@ -1,4 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import Blogs from "../Blogs";
 import axios from "axios";
 import AuthContext from "../../authContext";
@@ -27,12 +29,30 @@ const MyBlogs = () => {
 
   return (
     <div className="homepage">
-      <div style={{ padding: "20px" }}>My Blogs</div>
-      <div>
-        {myBlogs.map((blog) => (
-          <Blogs key={blog.id} data={blog} />
-        ))}
-      </div>
+      {!authenticated ? (
+        <div style={{ padding: "50px", height: "77vh" }}>
+          <Typography>
+            Please login : click login button to redirect signin page
+          </Typography>
+          <Button
+            size="medium"
+            color="primary"
+            variant="contained"
+            onClick={() => (window.location = "/signin")}
+          >
+            Back to Login
+          </Button>
+        </div>
+      ) : (
+        <div>
+          <div style={{ padding: "20px" }}>My Blogs</div>
+          <div>
+            {myBlogs.map((blog) => (
+              <Blogs key={blog.id} data={blog} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
