@@ -36,7 +36,7 @@ export default function SignIn() {
             localStorage.setItem('userDetails', JSON.stringify(user));
             setUserDeatils(user);
             setAuthenticated(true);
-            navigate('/dashboard');
+            navigate('/');
           }
         });
       } 

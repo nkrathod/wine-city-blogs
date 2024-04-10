@@ -21,7 +21,9 @@ const Home = () => {
     <>
       <div className="homepage">
         <div style={{ padding: "20px" }}>Nashik temples blogs</div>
-        {blogsData && blogsData.length > 0 && blogsData.map((blog) => <Blogs key={blog.id} data={blog}/>)}
+        {blogsData &&
+          blogsData.length > 0 &&
+          blogsData.map((blog) => <Blogs key={blog.id} data={blog} />)}
       </div>
     </>
   );

@@ -62,10 +62,10 @@ const Blogs = (props) => {
         </CardActions>
         <Box className="commentSection">
           <Grid container spacing={2}>
-            <Grid item xs={1}>
+            <Grid item xs={2} md={1}>
               <Avatar alt={props.data.name} src="/static/images/avatar/1.jpg" />
             </Grid>
-            <Grid item xs={11}>
+            <Grid item xs={10} md={11}>
               <TextField
                 fullWidth
                 size="small"
@@ -83,26 +83,25 @@ const Blogs = (props) => {
                 padding: "10px 20px",
               }}
             >
-              {" "}
               {comments.length > 0 &&
                 comments.map((data) => (
                   <Box style={{ padding: "5px" }}>
                     <Grid container spacing={2}>
-                      <Grid item xs={1}>
+                      <Grid item xs={2} md={1}>
                         <Avatar
                           alt={data.commentsBy.name}
                           src="/static/images/avatar/1.jpg"
                         />
                       </Grid>
-                      <Grid item xs={10}>
-                        <Typography variant="body2" color="text.secondary">
+                      <Grid item xs={8} md={10}>
+                        <Typography variant="caption" color="text.secondary">
                           {data.commentsBy.username}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="subtitle1" color="text.secondary">
                           {data.comment}
                         </Typography>
                       </Grid>
-                      <Grid item xs={1}>
+                      <Grid item xs={2} md={1}>
                         <Button size="small" startIcon={<ThumbUpIcon />}>
                           {data.likesCount}
                         </Button>

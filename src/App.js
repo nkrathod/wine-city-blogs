@@ -6,11 +6,9 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
+import Profile from "./components/Profile";
 import "./App.css";
-const DashboardLayout = lazy(() =>
-  import("./components/dashboard/DashboardLayout")
-);
-const Dashboard = lazy(() => import("./components/dashboard/Dashboard"));
+const MyBlogs = lazy(() => import("./components/dashboard/MyBlogs"));
 // import logo from "./logo.svg";
 
 const router = createBrowserRouter([
@@ -31,30 +29,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    // element: <Profile />,
-    element: <div>Profile</div>,
+    element: <Profile />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/dashboard",
-    element: <DashboardLayout />,
+    path: "/my-blogs",
+    element: <MyBlogs />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <Dashboard />,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: "/dashboard/blogs",
-        element: (
-          <Suspense fallback={<div>Lodding...</div>}>
-            <div>/dashboard/blogs</div>
-          </Suspense>
-        ),
-        errorElement: <ErrorPage />,
-      },
-    ],
   },
 ]);
 
