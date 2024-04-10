@@ -54,12 +54,13 @@ function NavbarComponent() {
         )}
         <li>
           {authenticated ? (
-            <Button variant="outlined" onClick={handleLogout}>
+            <Button variant="outlined" color="success" onClick={handleLogout}>
               Logout
             </Button>
           ) : (
             <Button
-              variant="outlined"
+              variant="contained"
+              color="success"
               onClick={() => (window.location = "/signin")}
             >
               Login

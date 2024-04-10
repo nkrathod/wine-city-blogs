@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Blogs from "./Blogs";
 import axios from "axios";
+import { Grid, Button } from "@mui/material";
 
 const Home = () => {
   const [blogsData, setBlogsData] = useState([]);
@@ -20,7 +21,21 @@ const Home = () => {
   return (
     <>
       <div className="homepage">
-        <div style={{ padding: "20px" }}>Nashik temples blogs</div>
+        <Grid container spacing={2} sx={{ p: 4 }}>
+          <Grid item xs={9}>
+            Nashik temples blogs
+          </Grid>
+          <Grid item xs={3}>
+            <Button
+              size="medium"
+              color="secondary"
+              variant="outlined"
+              onClick={() => (window.location = "/create-blogs")}
+            >
+              Create Blog
+            </Button>
+          </Grid>
+        </Grid>
         {blogsData &&
           blogsData.length > 0 &&
           blogsData.map((blog) => <Blogs key={blog.id} data={blog} />)}

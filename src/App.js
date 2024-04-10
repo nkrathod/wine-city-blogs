@@ -9,6 +9,7 @@ import ErrorPage from "./components/ErrorPage";
 import Profile from "./components/Profile";
 import "./App.css";
 const MyBlogs = lazy(() => import("./components/dashboard/MyBlogs"));
+const AddBlogs = lazy(() => import("./components/dashboard/AddBlogs"));
 // import logo from "./logo.svg";
 
 const router = createBrowserRouter([
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
   {
     path: "/my-blogs",
     element: <MyBlogs />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/create-blogs",
+    element: <AddBlogs />,
     errorElement: <ErrorPage />,
   },
 ]);

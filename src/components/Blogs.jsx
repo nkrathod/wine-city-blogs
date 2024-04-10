@@ -9,9 +9,12 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ModeCommentIcon from "@mui/icons-material/ModeComment";
 import { TextField, Avatar, Box, Grid } from "@mui/material";
 import axios from "axios";
+import dayjs from "dayjs";
+var relativeTime = require("dayjs/plugin/relativeTime");
 
 const Blogs = (props) => {
-  console.log("props ", props);
+  dayjs.extend(relativeTime);
+
   const [comments, setComments] = useState([]);
   useEffect(() => {
     axios
@@ -59,6 +62,9 @@ const Blogs = (props) => {
           <Button size="small" startIcon={<ModeCommentIcon />}>
             {props.data.commentsCount}
           </Button>
+          <Typography variant="subtitle2" display="block" gutterBottom>
+            {dayjs(props.data.timestamp).fromNow()}
+          </Typography>
         </CardActions>
         <Box className="commentSection">
           <Grid container spacing={2}>

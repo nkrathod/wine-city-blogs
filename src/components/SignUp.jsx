@@ -46,7 +46,7 @@ export default function SignUp() {
             localStorage.setItem("userDetails", JSON.stringify(user));
             setUserDeatils(user);
             setAuthenticated(true);
-            navigate("/dashboard");
+            navigate("/");
           }
         })
         .catch((error) => {

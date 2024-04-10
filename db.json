@@ -1,53 +1,97 @@
 {
-    "users": [
+  "users": [
+    {
+      "id": 1,
+      "name": "Administrator",
+      "firstName": "Admin",
+      "lastName": "User",
+      "username": "admin",
+      "password": "admin@123",
+      "usertype": "admin",
+      "email": "admin@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Rutuja Lambe",
+      "firstName": "Rutuja",
+      "lastName": "Lambe",
+      "username": "rutulambe",
+      "password": "rutu@123",
+      "usertype": "user",
+      "email": "rutulambe@gmail.com"
+    },
+    {
+      "firstName": "Nitesh",
+      "lastName": "Rathod",
+      "username": "niteshrathod15205@gmail.com",
+      "name": "Nitesh Rathod",
+      "email": "niteshrathod15205@gmail.com",
+      "password": "test123",
+      "usertype": "user",
+      "id": 3
+    },
+    {
+      "firstName": "Avntika",
+      "lastName": "Mane",
+      "username": "avntikamane",
+      "name": "Avntika Mane",
+      "email": "avntikamane@gmail.com",
+      "password": "mane123",
+      "usertype": "user",
+      "id": 4
+    }
+  ],
+  "blogs": [
+    {
+      "id": 123,
+      "title": "Trimbakeshwar Temple, Nashik",
+      "description": "Shri Trimbakeshwar Temple is located at a distance of about 28 km from Nashik City Trimbakeshwar is well connected by state transport buses.",
+      "imgUrl": "https://cdn.s3waas.gov.in/s3b3967a0e938dc2a6340e258630febd5a/uploads/bfi_thumb/2019011843-1-olwbulmmeklk3exiotgql930vls7weqlk9jiu0qoi2.jpg",
+      "userid": 2,
+      "username": "rutulambe",
+      "name": "Rutuja Lambe",
+      "timestamp": 1712779791531,
+      "likesCount": 2,
+      "commentsCount": 2,
+      "likedBy": [
         {
-          "id": 1,
-          "name": "Administrator",
-          "firstName": "Admin",
-          "lastName": "User",
-          "username": "admin",
-          "password": "admin@123",
-          "usertype": "admin",
-          "email": "admin@gmail.com"
-        },
-        {
-          "id": 2,
-          "name": "Rutuja Lambe",
-          "firstName": "Rutuja",
-          "lastName": "Lambe",
+          "userid": 2,
           "username": "rutulambe",
-          "password": "rutu@123",
-          "usertype": "user",
-          "email": "rutulambe@gmail.com"
-        },
-        {
-          "firstName": "Nitesh",
-          "lastName": "Rathod",
-          "username": "niteshrathod15205@gmail.com",
-          "name": "Nitesh Rathod",
-          "email": "niteshrathod15205@gmail.com",
-          "password": "test123",
-          "usertype": "user",
-          "id": 3
+          "name": "Rutuja Lambe"
         }
       ],
-      "blogs": [{
-        "id": 123,
-        "title": "Trimbakeshwar Temple, Nashik",
-        "description": "Shri Trimbakeshwar Temple is located at a distance of about 28 km from Nashik City Trimbakeshwar is well connected by state transport buses.",
-        "imgUrl": "https://cdn.s3waas.gov.in/s3b3967a0e938dc2a6340e258630febd5a/uploads/bfi_thumb/2019011843-1-olwbulmmeklk3exiotgql930vls7weqlk9jiu0qoi2.jpg",
-        "userid": 2,
-        "username": "rutulambe",
-        "name":"Rutuja Lambe",
-        "timestamp": "",
-        "likesCount": 2,
-        "commentsCount": 2,
-        "likedBy": [{"userid": 2, "username": "rutulambe", "name":"Rutuja Lambe"}],
-        "blogsComments": [{
+      "blogsComments": [
+        {
           "comment": "test comment",
           "likesCount": 1,
-          "likedBy": [{"userid": 2, "username": "rutulambe", "name":"Rutuja Lambe"}],
-          "commentsBy": {"userid": 2, "username": "rutulambe", "name":"Rutuja Lambe"}
-        }]
-      }]
+          "likedBy": [
+            {
+              "userid": 2,
+              "username": "rutulambe",
+              "name": "Rutuja Lambe"
+            }
+          ],
+          "commentsBy": {
+            "userid": 2,
+            "username": "rutulambe",
+            "name": "Rutuja Lambe"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Shree Kalaram Mandir",
+      "description": "Kalaram Mandir is situated within the Panchvati area of Nashik City. This temple is situated at a distance of 3 km from Central Bus.",
+      "imgUrl": "https://cdn.s3waas.gov.in/s3b3967a0e938dc2a6340e258630febd5a/uploads/bfi_thumb/2019011733-olwbuit3u2hp4l1m5a8uvrsn3g649bfejvl2e6uv0q.jpg",
+      "userid": 2,
+      "username": "rutulambe",
+      "name": "Rutuja Lambe",
+      "likesCount": 0,
+      "commentsCount": 0,
+      "timestamp": 1712779791531,
+      "likedBy": [],
+      "blogsComments": [],
+      "id": 124
+    }
+  ]
 }
