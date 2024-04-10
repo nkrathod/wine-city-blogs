@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import WineBarTwoToneIcon from "@mui/icons-material/WineBarTwoTone";
 import CloseTwoToneIcon from '@mui/icons-material/CloseTwoTone';
+import TempleHinduIcon from '@mui/icons-material/TempleHindu';
 import MenuIcon from '@mui/icons-material/Menu';
 
 function NavbarComponent() {
@@ -19,8 +20,7 @@ function NavbarComponent() {
   return (
     <nav>
       <h1 className="logo">
-        <WineBarTwoToneIcon fontSize="medium"/> <span style={{ color: "#ff004f" }}>N</span>ashik
-        City of <span style={{ color: "#ff004f" }}>Wine</span>
+        <TempleHinduIcon fontSize="medium"/> <span style={{ color: "#ff004f" }}>N</span>ashik <span style={{ color: "#ff004f" }}>Temple</span>
       </h1>
       <ul id="sidemenu">
         <li>

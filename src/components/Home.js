@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <>
       <div className="homepage">
-        <div style={{ padding: "20px" }}>Home page</div>
+        <div style={{ padding: "20px" }}>Nashik temples blogs</div>
         {blogsData && blogsData.length > 0 && blogsData.map((blog) => <Blogs key={blog.id} data={blog}/>)}
       </div>
     </>
