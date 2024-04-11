@@ -92,6 +92,64 @@
       "likedBy": [],
       "blogsComments": [],
       "id": 124
+    },
+    {
+      "title": "Sita Gufa, nashik",
+      "description": "Sita Gufa is close to KalaRam temple and located in panchvati area of nashik. Visitor needs to crawl through a narrow cave which is 1 level below ground.",
+      "imgUrl": "https://www.trawell.in/admin/images/upload/131652787Nashik_Sita_Gufaa_Main.jpg",
+      "userid": 4,
+      "username": "avntikamane",
+      "name": "Avntika Mane",
+      "likesCount": 0,
+      "commentsCount": 0,
+      "timestamp": 1712814465762,
+      "likedBy": [],
+      "blogsComments": [],
+      "id": 125
+    }
+  ],
+  "blogsComments": [
+    {
+      "id": 1,
+      "blogId": 123,
+      "comment": "very nice",
+      "likesCount": 1,
+      "likedBy": [
+        {
+          "userid": 2,
+          "username": "rutulambe",
+          "name": "Rutuja Lambe"
+        }
+      ],
+      "commentsBy": {
+        "userid": 2,
+        "username": "rutulambe",
+        "name": "Rutuja Lambe"
+      }
+    },
+    {
+      "blogId": 124,
+      "comment": "test",
+      "likesCount": 0,
+      "likedBy": [],
+      "commentsBy": {
+        "userid": 2,
+        "username": "rutulambe",
+        "name": "Rutuja"
+      },
+      "id": 2
+    },
+    {
+      "blogId": 124,
+      "comment": "test 2",
+      "likesCount": 0,
+      "likedBy": [],
+      "commentsBy": {
+        "userid": 2,
+        "username": "rutulambe",
+        "name": "Rutuja"
+      },
+      "id": 3
     }
   ]
 }

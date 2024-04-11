@@ -19,7 +19,6 @@ const MyBlogs = () => {
           const blogData = response.data.filter(
             (blog) => blog.username == userDetails.username
           );
-          console.log(userDetails, " ===> ", blogData);
           setMyBlogs(blogData);
         }
       })
