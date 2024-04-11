@@ -119,7 +119,7 @@ const Blogs = (props) => {
             <IconButton size="small" onClick={handleLikes}>
               <ThumbUpIcon color={isLiked ? "primary" : ""} />
             </IconButton>
-            <Typography variant="caption" color={isLiked ? "primary" : ""}>
+            <Typography variant="caption" color={isLiked ? "primary" : ""} className="likcount">
               {likesCount}
             </Typography>
           </div>
@@ -127,11 +127,11 @@ const Blogs = (props) => {
             <IconButton size="small" onClick={handleLikes}>
               <ModeCommentIcon color={isComment ? "primary" : ""} />
             </IconButton>
-            <Typography variant="caption" color={isComment ? "primary" : ""}>
+            <Typography variant="caption" color={isComment ? "primary" : ""} className="commentscount">
               {comments.length}
             </Typography>
           </div>
-          <Typography variant="subtitle2" display="block" gutterBottom>
+          <Typography variant="subtitle2" display="block" className="commentscount">
             {dayjs(props.data.timestamp).fromNow()}
           </Typography>
         </CardActions>

@@ -55,6 +55,14 @@ nav ul li a:hover::after{
   padding: 20px;
   border-top: 1px solid #333232;
 }
+.likcount{
+  font-size: 18px !important;
+  vertical-align: bottom;
+}
+.commentscount{
+  font-size: 18px !important;
+  vertical-align: middle;
+}
 
 /* --------------  css for small screens ---------- */
 nav .fa-solid{
