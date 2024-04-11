@@ -138,7 +138,7 @@ const Blogs = (props) => {
         <Box className="commentSection">
           <Grid container spacing={2}>
             <Grid item xs={2} md={1}>
-              <Avatar alt={props.data.name} src="/static/images/avatar/1.jpg" />
+              <Avatar alt={userDetails.firstName} src="/static/images/avatar/1.jpg" />
             </Grid>
             <Grid item xs={8} md={9}>
               <TextField
