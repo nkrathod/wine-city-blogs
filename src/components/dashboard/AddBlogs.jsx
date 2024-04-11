@@ -49,8 +49,7 @@ const AddBlogs = () => {
       blogsComments: [],
     };
 
-    if (formData && formData.title && formData.description) {
-      console.log("blogData ===> ", blogData);
+    if (formData && formData.title && formData.description && userDetails && userDetails.id) {
       axios
         .post("http://localhost:3003/blogs", blogData)
         .then((res) => {
