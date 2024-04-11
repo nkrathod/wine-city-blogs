@@ -86,6 +86,11 @@ const Blogs = (props) => {
         console.log(response);
         if (response && response.data && response.data.length > 0) {
           setComments(response.data);
+          response.data.forEach((comment) => {
+            if (comment.commentsBy.userid === userDetails.id) {
+              setIsComment(true);
+            }
+          });
         }
       })
       .catch((error) => {
