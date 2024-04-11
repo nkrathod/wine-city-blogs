@@ -1,6 +1,7 @@
 {
-  "name": "wine-city-blogs",
+  "name": "nashik-temple",
   "version": "0.1.0",
+  "homepage": "https://nkrathod.github.io/nashik-temple",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.3",
