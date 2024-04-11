@@ -59,7 +59,7 @@ const Blogs = (props) => {
           if (response.data) {
             setComment("");
             setCommentEff(response.data.id);
-            setIsComment(true)
+            setIsComment(true);
           }
         })
         .catch((error) => {
@@ -114,13 +114,17 @@ const Blogs = (props) => {
             <IconButton size="small" onClick={handleLikes}>
               <ThumbUpIcon color={isLiked ? "primary" : ""} />
             </IconButton>
-            <Typography variant="caption">{likesCount}</Typography>
+            <Typography variant="caption" color={isLiked ? "primary" : ""}>
+              {likesCount}
+            </Typography>
           </div>
           <div>
             <IconButton size="small" onClick={handleLikes}>
               <ModeCommentIcon color={isComment ? "primary" : ""} />
             </IconButton>
-            <Typography variant="caption">{comments.length}</Typography>
+            <Typography variant="caption" color={isComment ? "primary" : ""}>
+              {comments.length}
+            </Typography>
           </div>
           <Typography variant="subtitle2" display="block" gutterBottom>
             {dayjs(props.data.timestamp).fromNow()}
